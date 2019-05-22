@@ -1,0 +1,102 @@
+<!--<!DOCTYPE html>
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0,viewport-fit=cover"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>a</title>
+    <link rel="stylesheet" href="./a.css"/>
+<link rel="stylesheet" href="./a.js"/>    
+   
+
+</head>
+<body>
+1111
+<form action="" method="" name=""  onclick="" title="" style="center">
+  <input  alt="" checked="" name="" value="" type="submit"/>
+   <input  alt="" checked="" name="" value="" type="reset"/>
+   <input  alt="" checked="" name="" value="" type="hidden"/>
+   <input  alt="" checked="" name="" value="" type="image"/>
+   <input  alt="" checked="" name="" value="" type="radio"/>
+   <input  alt="" checked="" name="" value="" type="checkbox"/>
+   <input  alt="" checked="" name="" value="" type="password"/>
+   <input  alt="" checked="" name="" value="" type="text"/>
+</form>
+</body>
+</html>
+-->
+
+<html>
+    <head>
+        <title>2小时倒计时</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            .cutDown{
+                width: 100%;
+                height: 100%;
+                background:red;
+                background-size: 100%;
+                text-align: center;
+                color: #fff;
+                font-size: 80px;
+                font-weight: 100;
+                font-family: monospace;
+                position: absolute;
+                bottom: 0px;
+            }
+        </style>
+    </head>
+    <body >
+        <div id="time" class="cutDown"></div>
+        <div class="list"></div>
+        <script>
+        window.onload = function(){
+            var time = {
+                init: function() {
+                    var oTime=document.getElementById("time");
+                    var h='0' + 1;
+                    var m=59;
+                    var s=59;
+                    oTime.innerHTML="02 : 00 : 00";
+ 
+                    //进行倒计时显示
+                    var time = setInterval(function(){
+                        --s;
+                        if(s<0){
+                            --m;
+                            s=59;
+                        }
+                        if(m<0){
+                            --h;
+                            m=59
+                        }
+                        if(h<0){
+                            s=0;
+                            m=0;
+                        }
+                    // 判断当时分秒小于10时补0
+                        function checkTime(i){
+                            if (i < 10) {
+                                i = '0' + i
+                            }
+                            return i;
+                        }
+                        s = checkTime(s);
+                        m = checkTime(m);
+                        oTime.innerHTML=h+" : "+m+" : "+s;
+                    },1000);
+                }
+            }
+            time.init();
+        }
+        </script>
+    </body>
+</html>
