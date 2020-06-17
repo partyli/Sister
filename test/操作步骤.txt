@@ -1,3 +1,13 @@
+前置条件
+1、电脑有git
+安装
+
+腾讯开源
+https://opensource.tencent.com/projects
+腾讯软件中心
+https://pc.qq.com/detail/13/detail_22693.html
+
+
 拉取
 1、git init
 2、git clone https://github.com/partyli/Sister.git
@@ -5,8 +15,19 @@
 4、git remote -v
 5、git remote add origin git@githup.com/partyli/Sister.git
 
+拉取更新
+git pull
 
-腾讯
-https://opensource.tencent.com/projects
-腾讯软件中心
-https://pc.qq.com/detail/13/detail_22693.html
+git add .
+
+git commit -m "提交说明"
+
+git push (会有邮箱and密码输入界面弹出)
+
+git remote -v 查看现有分支
+
+git remote rm Sister 删除指定分支
+
+git remote add 链接   添加指定分支
+
+
