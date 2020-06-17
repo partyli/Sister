@@ -4,3 +4,9 @@
 3、ls
 4、git remote -v
 5、git remote add origin git@githup.com/partyli/Sister.git
+
+
+腾讯
+https://opensource.tencent.com/projects
+腾讯软件中心
+https://pc.qq.com/detail/13/detail_22693.html
